@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fay Nguyen's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/91613fcb11.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -26,7 +27,7 @@
         </div>
         
     </div>
-    <!-- ------about--------- -->
+<!-- -------------about--------- -->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -35,12 +36,80 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="subtitle">About Me</h1>
+
                     <p>👋Xin chào (Hello), I'm <span>Fay Nguyen</span>, a sophomore majoring in Computer Science and Mathematics in MN, USA.<br><br>
                         👀I'm interested in coding, software development, data science, and cybersecurity.<br><br>
                         🔍I am looking for research and internship opportunities in the technology-related field so I can gain knowledge and hands-on experience as well as discover where I could thrive in the most.</p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Language</span><br>C/C++, C#, Python, R, Kotlin, Javascript, HTML, CSS, Java, Bash</li>
+                            <li><span>Framework and Software</span><br>Rmarkdown, VirtualBox, Android Studio, VS Code, Visual Studio, Git, Tableau, .NET, MS
+                            SQL Server, Splunk, WireShark</li>
+                            <li><span>Certificate</span><br>CodePath Intermediate Cybersecurity, CodePath Intermediate Android Development</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>May 2023 - Present</span><br>Undergraduate Researcher at Collaborative Undergraduate Research and Inquiry Program, St.Olaf College</li>
+                            <li><span>Feb. 2023 – Present</span><br>Computer Science Teaching Assistant at MSCS Department, St.Olaf College</li>
+                            <li><span>Certificate</span><br>Technology Consulting Assistant at IT Department, St.Olaf College</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Sain Olaf College (MN,USA)</span><br>Majors: Computer Science, Mathematics, and Data Science<br>GPA: 4.0/4.0<br>Expected May 2026</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+<!-- -------------contact--------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p>University Mail:<a href="mailto:nguyen94@stolaf.edu">nguyen94@stolaf.edu</a></p>
+                    <p>Personal Mail:<a href="mailto:ntkhanh391914@gmail.com">ntkhanh391914@gmail.com</a></p>
+                    <p>Mobile phone:<a href="tel:5075819201">5075819201</a></p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/nguyen.tra.khanh.1212/"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://github.com/FayNguyen03"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://github.com/FayNguyen03"><i class="fa-brands fa-linkedin-in"></i></a>
+
+                    </div>
+                </div>
+                <div class="contact-right">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");  
+    }
+</script>
 </body>
 </html>
