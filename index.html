@@ -14,13 +14,15 @@
         <div class="container">
             <nav>
                 <img src="Logo.png" alt="Logo" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#project">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><i class="fa-regular fa-circle-xmark" id="fas" onclick="closemenu()"></i></li>
                 </ul>
+                <i class="fa-solid fa-bars" id="fas" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <h1>Hello, I am <span>Fay</span><br> from Minnesota, USA</h1>
@@ -107,7 +109,7 @@
  <!-- -------------project--------- -->
  <div id="project">
     <div class="container">
-        <h1 class="subtitle">Projects</h1>
+        <h1 class="subtitle">Portfolio</h1>
             <div class="projects">
                 <div class="work"> 
                     <img src="AND101P10Screens.gif" alt="Morning Mosaic Screen"> 
@@ -122,8 +124,7 @@
                         </div>
                         <br><br>
                         <ul>
-                            <li>Integrating the <em>Mediastack News RestAPI</em> and <em>AstrologyAPI</em> in the JSON format to retrieve the information on a daily basic</li>
-                            <li>Beautifying the user interface with the RecyclerView and navigation bar as well as customizing the themes for light/dark mode</li>
+                            <li>A morning app for people to wake up, look at their horoscope, and see some news while they are starting their day</li>                        
                         </ul>
                         <br><br>
                         <a href="https://github.com/AND101-THE-GIRLS/MORNING_MOSAIC"><i class="devicon-github-original" id = "repo"></i></a>
@@ -143,9 +144,8 @@
                         </div>              
                         <br><br>
                         <ul>
-                            <li>Utilized C# and Windows Forms to construct a GUI system that streamlines the restaurant staff's booking
+                            <li>A GUI system that streamlines the restaurant staff's booking
                                 processes, customer records management, and staff administration and requires a login procedure for access</li>
-                            <li>Stored information of customers, staff, and meal booking in the Microsoft SQL Server with real-time update</li>
                         </ul>
                         <br><br>
                         <a href="https://github.com/FayNguyen03/RestaurantManagement"><i class="devicon-github-original" id = "repo"></i></a>
@@ -165,9 +165,7 @@
                         </div> 
                         <br><br>
                         <ul>
-                            <li>Utilizing R to wrangle the weekly social data sets with 10,000+ data values</li>
-                            <li>Visualizing the data in Tableau based on the grammar of graphics and Elementary Perception Tasks principles and using 20+ different types
-                                of charts (circular, lollipop, racing bar chart,...) to create a comprehensive dashboard</li>
+                            <li>Wrangling and visualizing the weekly social data sets with 10,000+ data values to create a comprehensive dashboard</li>
                         </ul>          
                         <br><br>
                         <a href="https://public.tableau.com/app/profile/khanh.tra.nguyen.tran/vizzes"><iconify-icon icon="logos:tableau-icon" id = "repo"></iconify-icon></a>
@@ -179,36 +177,37 @@
 </div>
 
 <!-- -------------contact--------- -->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="subtitle">Contact Me</h1>
-                    <p><a href="mailto:nguyen94@stolaf.edu"><i class="fa-solid fa-envelope"></i>   nguyen94@stolaf.edu</a></p>
-                    <p><a href="mailto:ntkhanh391914@gmail.com"><i class="fa-regular fa-envelope"></i>   ntkhanh391914@gmail.com</a></p>
-                    <p><a href="tel:5075819201"><i class="fa-solid fa-mobile"></i>   (507)-581-9201</a></p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/nguyen.tra.khanh.1212/"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://github.com/FayNguyen03"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/faynguyen03/"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="Fay_Nguyen_Resume_2026.pdf"><i class="fa-regular fa-file" id="resume"></i></a>
-                    </div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><a href="mailto:nguyen94@stolaf.edu"><i class="fa-solid fa-envelope"></i>   nguyen94@stolaf.edu</a></p>
+                <p><a href="mailto:ntkhanh391914@gmail.com"><i class="fa-regular fa-envelope"></i>   ntkhanh391914@gmail.com</a></p>
+                <p><a href="tel:5075819201"><i class="fa-solid fa-mobile"></i>   (507)-581-9201</a></p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/nguyen.tra.khanh.1212/"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://github.com/FayNguyen03"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/faynguyen03/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="Fay_Nguyen_Resume_2026.pdf"><i class="fa-regular fa-file" id="resume"></i></a>
                 </div>
-                <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Who are you?" required>
-                        <input type="email" name="email" placeholder="Give me your email" required>
-                        <textarea name="Message" rows="6" placeholder="Send me a message and I will try to reach out to you ASAP!"></textarea>
-                        <button type="Submit" class="btn btn2">Send</button>
-                    </form>
-                </div>
+            </div>
+            <div class="contact-right">
+                <form name ="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Who are you?" required>
+                    <input type="email" name="Email" placeholder="Give me your email" required>
+                    <textarea name="Message" rows="6" placeholder="Send me a message and I will try to reach out to you ASAP!" required></textarea>
+                    <button type="submit" class="btn btn2">Send</button>
+                </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="copyright">
-        <p>Copyright ©️ Khanh Tra Nguyen Tran 2024. <i class="fa-solid fa-pen"></i></p>
-    </div>
+<div class="copyright">
+    <p>Copyright ©️ Khanh Tra Nguyen Tran 2024. <i class="fa-solid fa-pen"></i></p>
+</div>
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
@@ -224,5 +223,38 @@
         document.getElementById(tabname).classList.add("active-tab");  
     }
 </script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyDtVFAqAcDpVgwmt20C4hJC8lVOhbTVfIPL4kSmo2eIyxZ0K0i4Iq1xKVSAMSTDRR3oA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => 
+        msg.innerHTML = "Message sent successfully!",
+        setTimeout(function(){
+            msg.innerHTML = "" 
+        }, 5000),
+        form.reset(),
+        msg.innerHTML=""
+        )
+        .catch(error => 
+        msg.innerHTML = "Message failed to send!",
+        setTimeout(function(){
+            msg.innerHTML = "" 
+        }, 5000),
+        form.reset()),
+        msg.innerHTML=""
+    })
+  </script>
 </body>
 </html>

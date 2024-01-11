@@ -137,7 +137,7 @@ nav ul li a:hover::after{
 .tab-links::after{
     content: '';
     width: 0;
-    height: 2px;
+    height: 3px;
     background: #afeeee;
     position: absolute;
     left: 0;
@@ -205,7 +205,7 @@ nav ul li a:hover::after{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .exp-fields div{
@@ -243,9 +243,9 @@ nav ul li a:hover::after{
 
 .projects{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    grid-gap: 30px;
+    margin-top: 20px;
 }
 
 .work{
@@ -389,13 +389,31 @@ form input, form textarea{
     font-size: 18px;
 }
 
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+.contact-right span{
+    color: cyan;
+    display: block;
+    margin-top: -20px;
+}
+
 .btn2{
     padding: 14px 30px;
     font-size: 18px;
     margin-top: 10%;
     cursor: pointer;
-    background-color: #ff004f;
-    border-color: transparent;
+    background-color: transparent;
+    border-color:#ff004f;
 }
 
 .copyright{
@@ -413,10 +431,17 @@ form input, form textarea{
 }
 
 /*-------------css for small screens---------*/
-@media only screen and (max-width: 600px){
+nav #fas{
+    display:none;
+}
+
+@media only screen and (max-width: 800px){
     #header{
-        background-image:url(Phone.png);
+        width: 100%;
+        height: 150vh;
+        background-image:url(Phone.png); 
     }
+
 
     .header-text{
         margin-top: 10%;
@@ -425,5 +450,90 @@ form input, form textarea{
 
     .header-text h1{
         font-size:25px;
+    }
+
+    nav #fas{
+        display: block;
+        font-size: 20px;
+        font-size: 30px;
+    }
+
+    nav ul{
+        background: #262626;    
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px; 
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav #fas{
+        cursor: pointer;
+    }
+    nav ul #fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .subtitle{
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+
+    .about-col-2{
+        font-size: 14px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+        margin-top: 10%;
+    }
+
+    .copyright{
+        font-size: 14px;
+    }
+
+    .projects,.exp-fields{
+        grid-template-columns: 100%;
+    }
+
+    .layer{
+        font-size: 12px;
+    }
+    
+    .layer .icons{
+        font-size: 20px;
+    }
+
+    .layer ul{
+        display: none;
+        margin-bottom: 0;
+    }
+
+    .layer #repo{
+        font-size: 25px;
+        margin-top:3px;
     }
 }
