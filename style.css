@@ -13,7 +13,7 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(BG.png);
+    background-image: url(BG\ 2.png);
     background-position: center;
     background-size: cover;
 }
@@ -29,10 +29,39 @@ nav{
     flex-wrap: wrap;
 }
 
-.logo{
-    width: 150px;
-    max-height: 150px;
+.logo {
+    animation: color-animation 4s linear infinite;
 }
+
+.logos {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    margin-top: 5px;
+}
+  
+.logo-1 {
+--color-1: #00A9A5;
+--color-2: #4E8098;
+--color-3: #90C2E7;
+}
+  
+.logo-2 {
+--color-1: #62B6CB;
+--color-2: #CAE9FF;
+--color-3: #5FA8D3;
+}
+
+@keyframes color-animation {
+0%    {color: var(--color-1)}
+32%   {color: var(--color-1)}
+33%   {color: var(--color-2)}
+65%   {color: var(--color-2)}
+66%   {color: var(--color-3)}
+99%   {color: var(--color-3)}
+100%  {color: var(--color-1)}
+}
+
 
 nav ul li{
     display: inline-block;
@@ -158,6 +187,11 @@ nav ul li a:hover::after{
 .tab-contents ul li span{
     color:#afeeee ;
     font-size: 20px;
+    text-decoration: none;
+}
+
+.tab-contents ul li a{
+    text-decoration: none;
 }
 
 .tab-contents{
@@ -171,6 +205,7 @@ nav ul li a:hover::after{
 .tab-contents.active-tab{
     display: block;
 }
+
 
 .btn{
     display: block;
@@ -439,7 +474,7 @@ nav #fas{
     #header{
         width: 100%;
         height: 150vh;
-        background-image:url(Phone.png); 
+        background-image:url(Phone\ 2.png); 
     }
 
 
