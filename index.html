@@ -80,25 +80,28 @@
                     </div>
 
                     <div class="tab-contents" id="certificates">
-                        <ul>
-                            <li><span>CodePath</span>
+                        <p><i class="fa-solid fa-certificate"></i>: certificate available</p> 
+
+                        <div class="cert_row">
+                            <div class = "codepath"><span>CodePath</span>
                                 <ul>
-                                    <li><a href="https://drive.google.com/file/d/1Rvb5iTxZPl-Q2qRJxi-sAFsNmTH8_fHj/view">Intermediate Cybersecurity</a> 11/2023</li>
-                                    <li><a href="https://drive.google.com/file/d/1kNc4gmCkxdXffYX_bUS_akTseYxkvpqA/view?pli=1">Introduction to Android Development</a> 11/2023</li>
-                                    <li><a href="https://www.codepath.org/courses/android-development">Intermediate Android Development</a> Expected 04/2024</li>
-                                    <li><a href="https://www.codepath.org/courses/web-development">Introduction To Web Development</a> Expected 04/2024</li>
-                                    <li><a href="https://support.codepath.org/hc/en-us/sections/10451399248411-Technical-Interview-Prep-Advanced-Track">Technical Interview Prep - Advanced Track</a> Expected 08/2024</li>
+                                    <li><a href="https://drive.google.com/file/d/1Rvb5iTxZPl-Q2qRJxi-sAFsNmTH8_fHj/view">Intermediate Cybersecurity <i class="fa-solid fa-certificate"></i></a></li>
+                                    <li><a href="https://drive.google.com/file/d/1kNc4gmCkxdXffYX_bUS_akTseYxkvpqA/view?pli=1">Introduction to Android Development <i class="fa-solid fa-certificate"></i></a></li>
+                                    <li><a href="https://www.codepath.org/courses/android-development">Intermediate Android Development</i></a></li>
+                                    <li><a href="https://www.codepath.org/courses/web-development">Introduction To Web Development</a></li>
+                                    <li><a href="https://support.codepath.org/hc/en-us/sections/10451399248411-Technical-Interview-Prep-Advanced-Track">Technical Interview Prep - Advanced Track</a></li>
                                 </ul>
-                            <li><span>HackerRank</span>
+                            </div>
+                            <div class = "hackerrank"><span>HackerRank</span>
                                 <ul>
-                                    <li><a href="https://www.hackerrank.com/certificates/73f0b75faf71">Problem Solving (Basic)</a></li>
-                                    <li><a href="https://www.hackerrank.com/certificates/257db71fbf1f">Problem Solving (Intermediate)</a></li>
-                                    <li><a href="https://www.hackerrank.com/certificates/a772fe2ed661">Python (Basic)</a></li>
-                                    <li><a href="https://www.hackerrank.com/certificates/ccefe5bea12f">SQL (Intermediate)</a></li>
-                                    <li><a href="https://www.hackerrank.com/certificates/3370e404fbb4">Software Engineer Intern Certificate</a></li>
-                                    <iframe src="https://www.hackerrank.com/certificates/iframe/3370e404fbb4" frameborder="0"></iframe>
+                                    <li><a href="https://www.hackerrank.com/certificates/73f0b75faf71">Problem Solving (Basic) <i class="fa-solid fa-certificate"></i></a></li>
+                                    <li><a href="https://www.hackerrank.com/certificates/257db71fbf1f">Problem Solving (Intermediate) <i class="fa-solid fa-certificate"></i></a></li>
+                                    <li><a href="https://www.hackerrank.com/certificates/a772fe2ed661">Python (Basic) <i class="fa-solid fa-certificate"></i></a></li>
+                                    <li><a href="https://www.hackerrank.com/certificates/ccefe5bea12f">SQL (Intermediate) <i class="fa-solid fa-certificate"></i></a></li>
+                                    <li><a href="https://www.hackerrank.com/certificates/3370e404fbb4">Software Engineer Intern Certificate <i class="fa-solid fa-certificate"></i></a></li>
                                 </ul>
-                        </ul>
+                            </div>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -233,53 +236,6 @@
 <div class="copyright">
     <p>Copyright ©️ Khanh Tra Nguyen Tran 2024. <i class="fa-solid fa-pen"></i></p>
 </div>
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");  
-    }
-</script>
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-</script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyDtVFAqAcDpVgwmt20C4hJC8lVOhbTVfIPL4kSmo2eIyxZ0K0i4Iq1xKVSAMSTDRR3oA/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg");
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => 
-        msg.innerHTML = "Message sent successfully!",
-        setTimeout(function(){
-            msg.innerHTML = "" 
-        }, 5000),
-        form.reset(),
-        msg.innerHTML=""
-        )
-        .catch(error => 
-        msg.innerHTML = "Message failed to send!",
-        setTimeout(function(){
-            msg.innerHTML = "" 
-        }, 5000),
-        form.reset()),
-        msg.innerHTML=""
-    })
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
