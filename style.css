@@ -18,6 +18,9 @@ body{
     background-size: cover;
 }
 
+a{
+    text-decoration: none;
+}
 .container{
     padding: 1px 5%;   
 }
@@ -144,8 +147,8 @@ nav ul li a:hover::after{
 .subtitle{
     font-size: 60px;
     font-weight: 30px;
-    color:#ff004f;
-    margin-bottom: 10%;
+    color:cyan;
+    margin-bottom: 2.5%;
 }
 
 .about-col-2 p span{
@@ -323,12 +326,18 @@ nav ul li a:hover::after{
     overflow: hidden;
 }
 
+.second-row {
+    grid-row: 4;
+    margin-right: 30px;
+}
+
 .work img{
     width: 100%;
     max-height: 60%;
     border-radius: 30px;
     display: block;
 }
+
 .icons{
     flex-direction: row;
     font-size: 30px;
@@ -336,6 +345,7 @@ nav ul li a:hover::after{
 
 .icons i{
     margin-right: 10px;
+    text-decoration: none;
 }
 
 .icons iconify-icon{
@@ -345,6 +355,7 @@ nav ul li a:hover::after{
 .layer #repo{
     font-size: 35px;
     margin-bottom: 15px;
+    text-decoration: none;
 }
 
 .layer{
@@ -364,7 +375,7 @@ nav ul li a:hover::after{
     transition: height 0.5s;
 }
 
-.layer a{
+.layer a i{
     color: white;
     text-decoration: none;
 }
@@ -417,7 +428,7 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 #resume::after{
-    content: "Resume 01/2024";
+    content: "Resume 03/2024";
     display: none;
     position: absolute; /* Position the tooltip relative to the button */ 
     bottom: 100%; /* Position the tooltip above the button */ 
