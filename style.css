@@ -428,7 +428,7 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 #resume::after{
-    content: "Resume 03/2024";
+    content: "Resume 06/2024";
     display: none;
     position: absolute; /* Position the tooltip relative to the button */ 
     bottom: 100%; /* Position the tooltip above the button */ 
