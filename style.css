@@ -315,7 +315,7 @@ nav ul li a:hover::after{
 
 .projects{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
     grid-gap: 30px;
     margin-top: 20px;
 }
@@ -428,7 +428,7 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 #resume::after{
-    content: "Resume 06/2024";
+    content: "Resume 07/2024";
     display: none;
     position: absolute; /* Position the tooltip relative to the button */ 
     bottom: 100%; /* Position the tooltip above the button */ 
@@ -508,6 +508,27 @@ form input, form textarea{
 
 .copyright i{
     color: cyan;
+}
+
+.iframe-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 2%;
+    height: 55vh;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.interactive{
+    display:flex;
+    justify-content: center;
 }
 
 /*-------------css for small screens---------*/
@@ -616,4 +637,22 @@ nav #fas{
         font-size: 25px;
         margin-top:3px;
     }
+
+    .iframe-wrapper {
+        position: relative;
+        width: 100%;
+        padding-bottom: 2%;
+        height: 55vh
+    }
+    
+    .iframe-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    
 }
+

@@ -16,7 +16,7 @@ function preload(){
 
 function setup() {
   //Render in 3D mode
-  createCanvas(1420,500, WEBGL);
+  createCanvas(windowWidth,windowHeight, WEBGL);
   angleMode(DEGREES);
   rows = height / size;
   cols = width / size;

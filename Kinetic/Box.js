@@ -17,7 +17,7 @@ class Box{
             strokeWeight(2);
             fill(0,0,0);
             this.angle += 2;
-            this.depth += 2 * sin(this.angle);
+            this.depth += 2 * cos(this.angle);
         }
         else{
             this.angle -= 2;
