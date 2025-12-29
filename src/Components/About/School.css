@@ -93,7 +93,7 @@
     justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .School {
         padding: 1.5rem;
         margin: 0.5rem 0;
@@ -108,11 +108,11 @@
     .SchoolLocation {
         font-size: 1rem;
     }
-    
-    .SchoolImg {
-        width: 80px;
-        height: 80px;
-        bottom: 0.5rem;
-        right: 0.5rem;
+}
+
+@media (max-width: 400px) {  
+    .SchoolImage img {
+        visibility: hidden;
     }
 }
+

@@ -25,6 +25,32 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-color-light, #111);
+    margin: 4px 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#sidemenu.open {
+    display: flex;
 }
 
 .logo {
@@ -82,24 +108,51 @@
     .headerContainer {
         padding: 1rem 3%;
     }
-    
-    nav {
-        flex-direction: column;
+
+    .nav {
+        flex-direction: row;
         gap: 1rem;
     }
-    
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* hide menu by default on small screens */
     #sidemenu {
+        display: none;
         gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: stretch;
+        margin: 0;
+        padding: 1rem 1.25rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 80px;
+        background: rgba(255,255,255,0.97);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        z-index: 999;
     }
-    
+
     .logo {
         font-size: 1.25rem;
     }
-    
+
     .tab {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        padding: 0.5rem 0;
+    }
+
+    /* animated hamburger -> X (simple) */
+    .hamburger.is-active .bar:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+    .hamburger.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.is-active .bar:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
     }
 }
 
@@ -110,6 +163,17 @@
     
     #sidemenu {
         gap: 0.75rem;
+    }
+        color: var(--text-color-light);
+    }
+
+    /* Disable tab hover effect on small screens */
+    .tab:hover {
+        color: var(--text-color-light);
+        text-decoration: none;
+    }
+    .tab:hover::after {
+        width: 0;
     }
     
     .logo {

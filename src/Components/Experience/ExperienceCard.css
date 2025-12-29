@@ -76,24 +76,31 @@ i {
 
 
 @media screen and (max-width: 900px) {
-
-    .experienceCard {
-        transition: none;
-    }
     
+    .experienceCard {
+        width: 400px;
+        height: 200px;
+    }
+
     .experienceCard:hover {
-        transform: none;
+        width: 400px;
+        height: 200px;
         z-index: 1;
         box-shadow: none;
+        color: black;
     }
-    
+
     .experienceCard:hover .detail{
-        visibility: hidden;
+        display: none;
     }
-    
-    .experience:hover .experienceCard:not(:hover) {
-        transform: none;
-        opacity: 1;
-        filter: none;
+
+    .experienceCard:hover .titleSection{
+        background-color: transparent;
+        color: black;
     }
+
+    .experienceCard:hover .position{
+        color: black;
+    }
+
 }

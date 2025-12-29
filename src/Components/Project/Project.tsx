@@ -64,7 +64,7 @@ const horizontalProject: any[] = [
         icons: ['devicon-typescript-plain', 'devicon-html5-plain', 'devicon-css3-plain','devicon-react-original'],
         description: 'A website that defines Asian superheroes as a distinct sci-fi subgenre and introduces some prominent examples.',
         github: 'https://github.com/FayNguyen03/asian130.git',
-        link: 'hhttps://asian130.onrender.com/',
+        link: 'https://asian130.onrender.com/',
         linkIcon: 'bi bi-globe'
     },
     {
